@@ -1,0 +1,2 @@
+# Ignore generated log files but retain logs/ directory
+logs/*.log
