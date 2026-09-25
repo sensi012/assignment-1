@@ -139,33 +139,3 @@ Run the automated grading suite to test all components against the 100-point rub
 chmod +x grade.sh *.sh
 ./grade.sh
 ```
-
-### Rubric Breakdown:
-| Category | Points | Description |
-| :--- | :--- | :--- |
-| **Linux commands** | 20 | Runtime system vitals extraction (CPU, RAM, kernel, uptime) |
-| **Bash scripting** | 25 | Threshold comparison, `df -P` parsing, exit code handling |
-| **Networking** | 20 | Host resolution, ping connectivity, TCP port probes |
-| **Error handling** | 10 | Defensive bounds validation, exit code 2 on invalid inputs |
-| **Logging** | 10 | Timestamped audit entries written under `logs/` |
-| **Git workflow** | 10 | >= 5 meaningful commits, non-main feature branch, merged |
-| **README** | 5 | Setup, usage, testing, and assumptions clearly detailed |
-| **Total** | **100** | Full compliance with assignment brief |
-
----
-
-## 5. Assumptions
-
-1. **Linux Environment**: The scripts are designed to execute in standard POSIX-compatible Linux environments (such as Ubuntu 22.04+, Debian 12, Alpine 3.19+, or WSL2).
-2. **Network Reachability**: Ping (ICMP) checks assume outbound ICMP packets are not blocked by local firewalls. If ICMP is blocked, the script clearly flags it and continues with TCP port testing if a port was supplied.
-3. **No Cloud Dependencies**: All tools run purely with local Linux utilities and require no external cloud accounts or APIs.
-
----
-
-## 6. Git Workflow & Version Control History
-
-This repository followed strict Git hygiene:
-- Initialized with main branch `main`.
-- Created feature branch `feature/diagnostics` to implement diagnostic tools.
-- Committed multiple incremental, well-documented commits with conventional commit messages.
-- Merged `feature/diagnostics` into `main`.
